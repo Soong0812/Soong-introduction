@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<style>
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+    * {
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        margin: 0px;
+        height: 100%;
+    }
+
+    /* a blue color as a generic focus style */
+    button:focus-visible {
+        outline: 2px solid #4a90e2 !important;
+        outline: -webkit-focus-ring-color auto 5px !important;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .about {
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .about .div {
+        background-color: #ffffff;
+        width: 1440px;
+        height: 1788px;
+        position: relative;
+    }
+
+    .about .image {
+        position: absolute;
+        width: 508px;
+        height: 657px;
+        top: 244px;
+        left: 847px;
+        border-radius: 8px;
+        background: linear-gradient(0deg,
+                rgba(247, 247, 247, 1) 0%,
+                rgba(247, 247, 247, 1) 100%);
+    }
+
+    .about .copy {
+        display: flex;
+        flex-direction: column;
+        width: 624px;
+        height: 657px;
+        align-items: flex-start;
+        gap: var(--variable-collection-spacing-s);
+        position: absolute;
+        top: 244px;
+        left: 80px;
+    }
+
+    .about .text-wrapper {
+        position: relative;
+        align-self: stretch;
+        margin-top: -1.00px;
+        font-family: var(--title-font-family);
+        font-weight: var(--title-font-weight);
+        color: #000000;
+        font-size: var(--title-font-size);
+        letter-spacing: var(--title-letter-spacing);
+        line-height: var(--title-line-height);
+        font-style: var(--title-font-style);
+    }
+
+    .about .text-wrapper-2 {
+        position: relative;
+        align-self: stretch;
+        font-family: var(--subheading-font-family);
+        font-weight: var(--subheading-font-weight);
+        color: #828282;
+        font-size: var(--subheading-font-size);
+        letter-spacing: var(--subheading-letter-spacing);
+        line-height: var(--subheading-line-height);
+        font-style: var(--subheading-font-style);
+    }
+
+    .about .paragraph {
+        position: relative;
+        align-self: stretch;
+        font-family: var(--body-text-font-family);
+        font-weight: var(--body-text-font-weight);
+        color: #000000;
+        font-size: var(--body-text-font-size);
+        letter-spacing: var(--body-text-letter-spacing);
+        line-height: var(--body-text-line-height);
+        font-style: var(--body-text-font-style);
+    }
+
+    .about .navigation {
+        height: 164px;
+        top: 0;
+        position: absolute;
+        width: 1440px;
+        left: 0;
+        background-color: #ffffff;
+    }
+
+    .about .items {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: var(--variable-collection-spacing-m);
+        position: absolute;
+        top: 56px;
+        left: 970px;
+    }
+
+    .about .text-wrapper-3 {
+        position: relative;
+        width: fit-content;
+        font-family: var(--body-text-font-family);
+        font-weight: var(--body-text-font-weight);
+        color: #000000;
+        font-size: var(--body-text-font-size);
+        letter-spacing: var(--body-text-letter-spacing);
+        line-height: var(--body-text-line-height);
+        white-space: nowrap;
+        font-style: var(--body-text-font-style);
+    }
+
+    .about .button {
+        all: unset;
+        box-sizing: border-box;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 14px 24px;
+        position: relative;
+        flex: 0 0 auto;
+        background-color: #000000;
+        border-radius: 8px;
+        box-shadow: var(--button-shadow);
+    }
+
+    .about .text-wrapper-4 {
+        position: relative;
+        width: fit-content;
+        margin-top: -1.00px;
+        font-family: var(--small-text-font-family);
+        font-weight: var(--small-text-font-weight);
+        color: #ffffff;
+        font-size: var(--small-text-font-size);
+        letter-spacing: var(--small-text-letter-spacing);
+        line-height: var(--small-text-line-height);
+        white-space: nowrap;
+        font-style: var(--small-text-font-style);
+    }
+
+    .about .text-wrapper-5 {
+        position: absolute;
+        height: 30px;
+        top: 66px;
+        left: 80px;
+        font-family: var(--body-text-font-family);
+        font-weight: var(--body-text-font-weight);
+        color: #000000;
+        font-size: var(--body-text-font-size);
+        letter-spacing: var(--body-text-letter-spacing);
+        line-height: var(--body-text-line-height);
+        white-space: nowrap;
+        font-style: var(--body-text-font-style);
+    }
+
+    .about .navigation-footer {
+        height: 264px;
+        top: 1524px;
+        position: absolute;
+        width: 1440px;
+        left: 0;
+        background-color: #ffffff;
+    }
+
+    .about .items-2 {
+        display: flex;
+        flex-direction: column;
+        width: 187px;
+        align-items: flex-end;
+        justify-content: center;
+        gap: var(--variable-collection-spacing-s);
+        position: absolute;
+        top: 48px;
+        left: 736px;
+    }
+
+    .about .text-wrapper-6 {
+        position: relative;
+        align-self: stretch;
+        margin-top: -1.00px;
+        font-family: var(--small-text-font-family);
+        font-weight: var(--small-text-font-weight);
+        color: #000000;
+        font-size: var(--small-text-font-size);
+        letter-spacing: var(--small-text-letter-spacing);
+        line-height: var(--small-text-line-height);
+        font-style: var(--small-text-font-style);
+    }
+
+    .about .text-wrapper-7 {
+        position: relative;
+        align-self: stretch;
+        font-family: var(--small-text-font-family);
+        font-weight: var(--small-text-font-weight);
+        color: #444444;
+        font-size: var(--small-text-font-size);
+        letter-spacing: var(--small-text-letter-spacing);
+        line-height: var(--small-text-line-height);
+        font-style: var(--small-text-font-style);
+    }
+
+    .about .items-3 {
+        display: flex;
+        flex-direction: column;
+        width: 187px;
+        align-items: flex-end;
+        justify-content: center;
+        gap: var(--variable-collection-spacing-s);
+        position: absolute;
+        top: 48px;
+        left: 955px;
+    }
+
+    .about .items-4 {
+        display: flex;
+        flex-direction: column;
+        width: 187px;
+        align-items: flex-end;
+        justify-content: center;
+        gap: var(--variable-collection-spacing-s);
+        position: absolute;
+        top: 48px;
+        left: 1173px;
+    }
+
+    .about .text-wrapper-8 {
+        position: absolute;
+        height: 36px;
+        top: 51px;
+        left: 80px;
+        font-family: var(--subheading-font-family);
+        font-weight: var(--subheading-font-weight);
+        color: #000000;
+        font-size: var(--subheading-font-size);
+        letter-spacing: var(--subheading-letter-spacing);
+        line-height: var(--subheading-line-height);
+        white-space: nowrap;
+        font-style: var(--subheading-font-style);
+    }
+
+    .about .social-icons {
+        display: inline-flex;
+        align-items: flex-start;
+        gap: var(--variable-collection-spacing-XS);
+        position: absolute;
+        top: 176px;
+        left: 80px;
+    }
+
+    .about .buttons-icon {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border-radius: 4px;
+    }
+
+    .about .icon {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        top: 8px;
+        left: 8px;
+    }
+
+    .about .img {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 2px;
+        left: 2px;
+    }
+
+    .about .icon-2 {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        top: 3px;
+        left: 3px;
+    }
+
+    .about .icon-3 {
+        position: absolute;
+        width: 20px;
+        height: 14px;
+        top: 5px;
+        left: 2px;
+    }
+
+    .about .divider {
+        position: absolute;
+        width: 1280px;
+        height: 1px;
+        top: 0;
+        left: 80px;
+        object-fit: cover;
+    }
+
+    :root {
+        --title-font-family: "Inter", Helvetica;
+        --title-font-weight: 700;
+        --title-font-size: 64px;
+        --title-letter-spacing: -1.28px;
+        --title-line-height: normal;
+        --title-font-style: normal;
+        --subheading-font-family: "Inter", Helvetica;
+        --subheading-font-weight: 400;
+        --subheading-font-size: 24px;
+        --subheading-letter-spacing: 0px;
+        --subheading-line-height: 150%;
+        --subheading-font-style: normal;
+        --body-text-font-family: "Inter", Helvetica;
+        --body-text-font-weight: 500;
+        --body-text-font-size: 20px;
+        --body-text-letter-spacing: 0px;
+        --body-text-line-height: 150%;
+        --body-text-font-style: normal;
+        --small-text-font-family: "Inter", Helvetica;
+        --small-text-font-weight: 500;
+        --small-text-font-size: 16px;
+        --small-text-letter-spacing: 0px;
+        --small-text-line-height: 150%;
+        --small-text-font-style: normal;
+        --button-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+        --variable-collection-spacing-s: 24px;
+        --variable-collection-spacing-m: 48px;
+        --variable-collection-spacing-XS: 8px;
+    }
+</style>
+
+
+<body>
+    <div class="about">
+        <div class="div">
+            <div class="image"></div>
+            <div class="copy">
+                <div class="text-wrapper">이관영</div>
+                <div class="text-wrapper-2">설명 또는 안내 부제목</div>
+                <p class="paragraph">
+                    전체 기사 또는 게시물의 본문 텍스트. 페이지가 채워졌을 때를 재현하기 <br />위해 로렘 입숨을 넣어
+                    보겠습니다.<br /><br />Excepteur efficient emerging, minim veniam anim aute carefully curated Ginza
+                    conversation exquisite perfect nostrud nisi intricate Content. Qui&nbsp;&nbsp;international
+                    first-class
+                    nulla ut. Punctual adipisicing, essential lovely queen tempor eiusmod irure. Exclusive izakaya
+                    charming
+                    Scandinavian impeccable aute quality of life soft power pariatur Melbourne occaecat discerning. Qui
+                    wardrobe
+                    aliquip, et Porter destination Toto remarkable officia Helsinki excepteur Basset hound. Zürich
+                    sleepy
+                    perfect consectetur.
+                </p>
+            </div>
+            <div class="navigation">
+                <div class="items">
+                    <div class="text-wrapper-3">페이지</div>
+                    <div class="text-wrapper-3">페이지</div>
+                    <div class="text-wrapper-3">페이지</div>
+                    <button class="button">
+                        <div class="text-wrapper-4">버튼</div>
+                    </button>
+                </div>
+                <div class="text-wrapper-5">사이트 이름</div>
+            </div>
+            <div class="navigation-footer">
+                <div class="items-2">
+                    <div class="text-wrapper-6">주제</div>
+                    <div class="text-wrapper-7">페이지</div>
+                    <div class="text-wrapper-7">페이지</div>
+                    <div class="text-wrapper-7">페이지</div>
+                </div>
+                <div class="items-3">
+                    <div class="text-wrapper-6">주제</div>
+                    <div class="text-wrapper-7">페이지</div>
+                    <div class="text-wrapper-7">페이지</div>
+                    <div class="text-wrapper-7">페이지</div>
+                </div>
+                <div class="items-4">
+                    <div class="text-wrapper-6">주제</div>
+                    <div class="text-wrapper-7">페이지</div>
+                    <div class="text-wrapper-7">페이지</div>
+                    <div class="text-wrapper-7">페이지</div>
+                </div>
+                <div class="text-wrapper-8">사이트 이름</div>
+                <div class="social-icons">
+                    <div class="buttons-icon">
+                        <div class="icon"><img class="img" src="img/icon-3.svg" /></div>
+                    </div>
+                    <div class="buttons-icon">
+                        <div class="icon"><img class="icon-2" src="img/icon.svg" /></div>
+                    </div>
+                    <div class="buttons-icon">
+                        <div class="icon"><img class="icon-3" src="img/image.svg" /></div>
+                    </div>
+                    <div class="buttons-icon">
+                        <div class="icon"><img class="img" src="img/icon-2.svg" /></div>
+                    </div>
+                </div>
+                <img class="divider" src="img/divider.svg" />
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
